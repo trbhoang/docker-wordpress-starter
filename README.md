@@ -10,10 +10,3 @@
 $ cd docker-wordpress-starter
 $ docker-compose up
 ```
-
-## Access development box
-
-```bash
-$ cd docker-laravel-app
-$ larabox
-```
