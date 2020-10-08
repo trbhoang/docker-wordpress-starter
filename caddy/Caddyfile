@@ -3,5 +3,8 @@ localhost
 log
 
 root * /var/www/html
+file_server {
+    hide .*
+}
 encode gzip
 php_fastcgi web:9000
