@@ -3,7 +3,7 @@ services:
   caddy:
     image: caddy:2.1.1-alpine
     volumes:
-      - wordpress:/var/www/html
+      - ./web/source:/var/www/html
       - ./caddy/Caddyfile:/etc/caddy/Caddyfile
       - caddydata:/data
       - caddyconfig:/config
@@ -21,7 +21,7 @@ services:
       WORDPRESS_DB_PASSWORD: wordpress
       WORDPRESS_DB_NAME: wordpress
     volumes:
-      - wordpress:/var/www/html
+      - ./web/source:/var/www/html
     depends_on:
       - db
 
@@ -48,4 +48,3 @@ volumes:
   dbdata:
   caddydata:
   caddyconfig:
-  wordpress:
